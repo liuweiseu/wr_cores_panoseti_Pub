@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE             1/14/2019 - 14:27
+SOURCE          /media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design/QuadrantBoard.mcs
+DEVICE          32768K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0xC81A9DFD
+START_ADDRESS   0x00000000 END_ADDRESS 0x00379DF3 DIRECTION_UP   "/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design/clbv2_wr_ref_top.bit" 7k160tfbg676

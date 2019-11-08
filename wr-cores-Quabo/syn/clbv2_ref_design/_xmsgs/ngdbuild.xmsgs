@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;clk_125m_gtx_p_i&quot; TNM_NET = clk_125m_gtx_p_i;&gt; [/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf(19)] was not distributed to the output pin TXOUTCLK of block cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/gtxe2_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;clk_125m_gtx_p_i&quot; TNM_NET = clk_125m_gtx_p_i;&gt; [/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf(19)] was not distributed to the output pin RXOUTCLK of block cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/gtxe2_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;clk_125m_gtx_n_i&quot; TNM_NET = clk_125m_gtx_n_i;&gt; [/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf(21)] was not distributed to the output pin TXOUTCLK of block cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/gtxe2_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >Constraint &lt;NET &quot;clk_125m_gtx_n_i&quot; TNM_NET = clk_125m_gtx_n_i;&gt; [/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf(21)] was not distributed to the output pin RXOUTCLK of block cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/gtxe2_i because the signal path to this output pin depends upon block attribute settings. Constraint distribution does not support attribute dependent distribution.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_20m_vcxo_i</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk_20m_vcxo_i</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_dmtd_clk_pll</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_dmtd = PERIOD &quot;cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_...&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_125m_gtx_p_i</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk_125m_gtx_p_i</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_sys = PERIOD &quot;cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_s...&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_125m_gtx_n_i</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_clk_125m_gtx_n_i</arg>&apos;, was traced into <arg fmt="%s" index="4">MMCME2_ADV</arg> instance <arg fmt="%s" index="5">cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">MMCME2_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_sys_0 = PERIOD &quot;cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk...&gt;</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_with_ext_clock_input.U_DMTD_EXT/clk_in</arg> with clock driver <arg fmt="%s" index="2">cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.gen_kintex7_ext_ref_pll.cmp_clk_ext_buf_o</arg> drives no clock pins
+</msg>
+
+</messages>
+

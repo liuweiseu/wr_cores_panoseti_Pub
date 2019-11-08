@@ -1,0 +1,182 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.wr_fabric_pkg.all;
+use work.wishbone_pkg.all;
+use work.axi4_stream_pkg.all;
+
+entity wb2aixfifo is
+	generic(
+		src_addr  :integer :=	16#FFFFFFFFFFFF#;
+		dest_addr :integer :=	16#FFFFFFFFFFFF#);
+	port(
+		clk_sys_i : in		std_logic;
+		rst_n_i	 : in		std_logic;
+		
+		wrf_snk_i : in		t_wrf_sink_in;
+		wrf_snk_o : out 	t_wrf_sink_out;
+		wrf_src_o : out	t_wrf_source_out;
+		wrf_src_i : in		t_wrf_source_in;
+		
+		axi_rxd_o : out t_axi_stream_rxd_o;
+		axi_rxd_i : in	t_axi_stream_rxd_i;
+		axi_txd_o : out t_axi_stream_txd_o;
+		axi_txd_i : in	t_axi_stream_txd_i;
+		
+		wb_i : in	t_wishbone_slave_in;
+		wb_o : out	t_wishbone_slave_out);
+
+end wb2axififo;
+
+architecture rtl if wb2axififo is
+	type r_state is
+		(IDLE,STATES_WORD,MAC_ADDR,ET,PAYLOAD);
+	signal rxd2src_state : r_state;
+	type t_state is
+		();
+	signal txd2snk_state : t_state;
+	
+	signal src_status :t_wrf_status_reg;
+	src_status.has_crc <= '1'; --这里t_wrf_status_reg的字段定义似乎与user manual里定义的不同
+	
+	type t_mac_array is array (natural range <>) of std_logic_vector(15 downto 0);
+	signal dmac : t_mac_array(2 downto 0);
+	signal smac : t_mac_array(2 downto 0);
+	dmac(0) <= dest_addr(47 downto 32);
+	dmac(1) <= dest_addr(31 downto 16);
+	dmac(2) <= dest_addr(15 downto 0);
+	smac(0) <= src_addr(47 downto 32);
+	smac(1) <= src_addr(31 downto 16);
+	smac(2) <= src_addr(15 downto 0);
+	
+	signal et : std_logic_vector(15 downto 0) := X"F2B0";
+	
+	signal mac_num : std_logic_vector(1 downto 0) := "00";
+	
+	--signals used by fifo
+	signal rxd2src_data_wr : std_logic;
+	signal rxd2src_data_in0 : std_logic_vector(17 downto 0);
+	signal rxd2src_data_in1 : std_logic_vector(17 downto 0);
+	signal rxd2src_data_out0 : std_logic_vector(17 downto 0);
+	signal rxd2src_data_out1 : std_logic_vector(17 downto 0);
+	signal rxd2src_fifo_full0 : std_logic;
+	signal rxd2src_fifo_full1 : std_logic;
+	signal rxd2src_fifo_empty0 : std_logic;
+	signal rxd2src_fifo_empty1 : std_logic;
+begin
+	rxd2src_data_in0(17 downto 16) <= axi_rxd_i.tkeep(1 downto 0);
+	rxd2src_data_in0(15 downto 0) <= axi_rxd_i.data(15 downto 0);
+	RXD2SRC_DATA_FIFO0: generic_sync_fifo				
+   generic map(
+      g_data_width  => 18,
+      g_size        => 1024,
+      g_with_empty  => true,
+      g_with_full   => true,
+      g_with_almost_empty  => false,
+      g_with_almost_full   => false,
+      g_with_count  => true)
+   port map(
+      rst_n_i => rst_n_i,
+      clk_i   => clk_sys_i,
+      d_i     => rxd2src_data_in0,
+      we_i    => rxd2src_data_wr,
+      q_o     => rxd2src_data_out0,
+      rd_i    => '1',
+      empty_o => rxd2src_fifo_empty0,
+      full_o  => rxd2src_fifo_full0);
+	
+	rxd2src_data_in1(17 downto 16) <= axi_rxd_i.tkeep(1 downto 0);
+	rxd2src_data_in1(15 downto 0) <= axi_rxd_i.data(31 downto 16);
+	RXD2SRC_DATA_FIFO1: generic_sync_fifo				
+   generic map(
+      g_data_width  => 18,
+      g_size        => 1024,
+      g_with_empty  => true,
+      g_with_full   => true,
+      g_with_almost_empty  => false,
+      g_with_almost_full   => false,
+      g_with_count  => true)
+   port map(
+      rst_n_i => rst_n_i,
+      clk_i   => clk_sys_i,
+      d_i     => rxd2src_data_in1,
+      we_i    => rxd2src_data_wr,
+      q_o     => rxd2src_data_out1,
+      rd_i    => '1',
+      empty_o => rxd2src_fifo_empty1,
+      full_o  => rxd2src_fifo_full1);
+	--used for rxd-->wrf src
+	process(clk_sys_i)
+	begin
+		if rising_edge(clk_sys_i) then
+			if rst_n_i = '0' then
+				--wrf src
+				wrf_src_o.adr <= '0';
+				wrf_src_o.dat <= '0000';
+				wrf_src_o.cyc <= '0';
+				wrf_src_o.stb <= '0';
+				wrf_src_o.we  <= '0';
+				wrf_src_o.sel <= '00';
+				--rxd
+				axi_rxd_o.tready <='0';
+			else
+				case when rxd2src_state is
+					when IDLE =>
+						if axi_rxd_i.tvaild = '1' then
+							rxd2src_state <= STATES_WORD;
+						end if;
+						
+					when STATES_WORD =>
+						if axi_rxd_i_tvaildo = '1' then
+							wrf_src_o.cyc <= '0';
+							wrf_src_o.stb <= '0';
+							wrf_src_o.adr <= "10";
+							wrf_src_o.dat <= src_status;
+							wrf_src_o.sel <= "11";
+							wrf_src_o.we <='1';
+							
+							if wrf_src_i.stall = '0' and wrf_src_i.ack = '1' then
+								wrf_src_o.dat <= dmac(mac_num);
+								mac_num <= mac_num + 1;
+								wrf_src_o.adr <= "00";
+								rxd2src_state <= MAC_ADDR;
+							end if;
+						end if;
+					
+					when MAC_ADDR =>
+						if wrf_src_i.stall = '0' and wrf_src_i.ack = '1' then
+							wrf_src_o.dat <= dmac(mac_num)
+							mac_num <= mac_num + 1;
+							if mac_num = "10" then
+								rxd2src_state <= ET;
+							end if;
+						end if;
+					when ET =>
+						if wrf_src_i.stall = '0' and wrf_src_i.ack = '1' then
+							wrc_src_o.dat <= et;
+							axi_rxd_o.tready <= '1';
+							rxd2src_state <= PAYLOAD;
+						end if;
+					when PAYLOAD =>
+						rxd2src_data_wr <= '1';
+						if rxd2src_fifo_empty0 = '0' and rxd2src_fifo_empty1 = '1'  then
+							
+						
+						
+					
+				end case;
+			end if;
+		end if;
+	end process;
+	
+	process(clk_sys_i)
+		begin
+			if rst_n_i = '0' then
+			
+			else
+				case when txd2snk_state is
+					when =>
+				
+				
+				end case;
+			end if;
+		end process

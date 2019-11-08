@@ -1,0 +1,9 @@
+Storage Target: SPI Flash Single FPGA
+256M
+FF
+Untitled
+/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design
+
+MCS
+No
+

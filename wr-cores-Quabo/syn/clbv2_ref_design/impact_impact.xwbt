@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design/impact.xsl
+OUTFILE=/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design/impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design
+LICENSE=iMPACT
+USER_INFO=iMPACT

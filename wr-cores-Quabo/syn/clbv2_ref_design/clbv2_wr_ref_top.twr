@@ -1,0 +1,1881 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/home/wei/Software/ISE14.7/install/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce
+-intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml clbv2_wr_ref_top.twx
+clbv2_wr_ref_top.ncd -o clbv2_wr_ref_top.twr clbv2_wr_ref_top.pcf
+
+Design file:              clbv2_wr_ref_top.ncd
+Physical constraint file: clbv2_wr_ref_top.pcf
+Device,package,speed:     xc7k160t,fbg676,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clk_20m_vcxo_i = PERIOD TIMEGRP "clk_20m_vcxo_i" 50 ns 
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 30 paths analyzed, 16 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  20.000ns.
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 (SLICE_X22Y142.CE), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     48.284ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.681ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.AQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    SLICE_X22Y142.D2     net (fanout=4)        0.587   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<0>
+    SLICE_X22Y142.DMUX   Tilo                  0.180   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.681ns (0.707ns logic, 0.974ns route)
+                                                       (42.1% logic, 57.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     48.292ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.673ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.CQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    SLICE_X22Y142.D1     net (fanout=2)        0.579   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<2>
+    SLICE_X22Y142.DMUX   Tilo                  0.180   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.673ns (0.707ns logic, 0.966ns route)
+                                                       (42.3% logic, 57.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     48.378ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.587ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.BQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    SLICE_X22Y142.D4     net (fanout=3)        0.495   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<1>
+    SLICE_X22Y142.DMUX   Tilo                  0.178   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.587ns (0.705ns logic, 0.882ns route)
+                                                       (44.4% logic, 55.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 (SLICE_X22Y142.CE), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     48.284ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.681ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.AQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    SLICE_X22Y142.D2     net (fanout=4)        0.587   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<0>
+    SLICE_X22Y142.DMUX   Tilo                  0.180   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.681ns (0.707ns logic, 0.974ns route)
+                                                       (42.1% logic, 57.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     48.292ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.673ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.CQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    SLICE_X22Y142.D1     net (fanout=2)        0.579   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<2>
+    SLICE_X22Y142.DMUX   Tilo                  0.180   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.673ns (0.707ns logic, 0.966ns route)
+                                                       (42.3% logic, 57.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     48.378ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.587ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.BQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    SLICE_X22Y142.D4     net (fanout=3)        0.495   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<1>
+    SLICE_X22Y142.DMUX   Tilo                  0.178   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    -------------------------------------------------  ---------------------------
+    Total                                      1.587ns (0.705ns logic, 0.882ns route)
+                                                       (44.4% logic, 55.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 (SLICE_X22Y142.CE), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     48.284ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.681ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.AQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    SLICE_X22Y142.D2     net (fanout=4)        0.587   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<0>
+    SLICE_X22Y142.DMUX   Tilo                  0.180   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.681ns (0.707ns logic, 0.974ns route)
+                                                       (42.1% logic, 57.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     48.292ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.673ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.CQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    SLICE_X22Y142.D1     net (fanout=2)        0.579   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<2>
+    SLICE_X22Y142.DMUX   Tilo                  0.180   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.673ns (0.707ns logic, 0.966ns route)
+                                                       (42.3% logic, 57.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     48.378ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2 (FF)
+  Requirement:          50.000ns
+  Data Path Delay:      1.587ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 0.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.BQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    SLICE_X22Y142.D4     net (fanout=3)        0.495   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<1>
+    SLICE_X22Y142.DMUX   Tilo                  0.178   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv11
+    SLICE_X22Y142.CE     net (fanout=1)        0.387   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o_inv
+    SLICE_X22Y142.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      1.587ns (0.705ns logic, 0.882ns route)
+                                                       (44.4% logic, 55.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk_20m_vcxo_i = PERIOD TIMEGRP "clk_20m_vcxo_i" 50 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn (SLICE_X23Y142.A5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.176ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.187ns (Levels of Logic = 1)
+  Clock Path Skew:      0.011ns (0.063 - 0.052)
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.AQ     Tcko                  0.118   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_0
+    SLICE_X23Y142.A5     net (fanout=4)        0.109   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<0>
+    SLICE_X23Y142.CLK    Tah         (-Th)     0.040   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o1
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn
+    -------------------------------------------------  ---------------------------
+    Total                                      0.187ns (0.078ns logic, 0.109ns route)
+                                                       (41.7% logic, 58.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn (SLICE_X23Y142.A4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.203ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.214ns (Levels of Logic = 1)
+  Clock Path Skew:      0.011ns (0.063 - 0.052)
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.BQ     Tcko                  0.118   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_1
+    SLICE_X23Y142.A4     net (fanout=3)        0.136   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<1>
+    SLICE_X23Y142.CLK    Tah         (-Th)     0.040   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count[3]_PWR_67_o_equal_1_o1
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/master_rstn
+    -------------------------------------------------  ---------------------------
+    Total                                      0.214ns (0.078ns logic, 0.136ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_3 (SLICE_X22Y142.D3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.209ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_3 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.209ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Destination Clock:    clk_20m_vcxo_i_IBUFG rising at 50.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_3 to cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y142.DQ     Tcko                  0.118   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_3
+    SLICE_X22Y142.D3     net (fanout=2)        0.150   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+    SLICE_X22Y142.CLK    Tah         (-Th)     0.059   cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count<3>
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/Result<3>1
+                                                       cmp_xwrc_board_clbv2/cmp_rstlogic_reset/locked_count_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.209ns (0.059ns logic, 0.150ns route)
+                                                       (28.2% logic, 71.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk_20m_vcxo_i = PERIOD TIMEGRP "clk_20m_vcxo_i" 50 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 14.751ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 1.249ns (800.641MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_dmtd_clk_pll/CLKOUT0
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_dmtd_clk_pll/CLKOUT0
+  Location pin: MMCME2_ADV_X0Y1.CLKOUT0
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.clk_dmtd
+--------------------------------------------------------------------------------
+Slack: 30.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 50.000ns
+  Low pulse: 25.000ns
+  Low pulse limit: 10.000ns (Tmmcmpw_CLKIN1_10_25)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_dmtd_clk_pll/CLKIN1
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_dmtd_clk_pll/CLKIN1
+  Location pin: MMCME2_ADV_X0Y1.CLKIN1
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.clk_20m_vcxo_buf
+--------------------------------------------------------------------------------
+Slack: 30.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 50.000ns
+  High pulse: 25.000ns
+  High pulse limit: 10.000ns (Tmmcmpw_CLKIN1_10_25)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_dmtd_clk_pll/CLKIN1
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_dmtd_clk_pll/CLKIN1
+  Location pin: MMCME2_ADV_X0Y1.CLKIN1
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.clk_20m_vcxo_buf
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_125m_gtx_p_i = PERIOD TIMEGRP "clk_125m_gtx_p_i" 8 ns 
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk_125m_gtx_p_i = PERIOD TIMEGRP "clk_125m_gtx_p_i" 8 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 4.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 8.000ns
+  Low pulse: 4.000ns
+  Low pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll_10m/CLKIN1
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll_10m/CLKIN1
+  Location pin: MMCME2_ADV_X0Y2.CLKIN1
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/clk_125m_pllref_buf
+--------------------------------------------------------------------------------
+Slack: 4.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 8.000ns
+  High pulse: 4.000ns
+  High pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll_10m/CLKIN1
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll_10m/CLKIN1
+  Location pin: MMCME2_ADV_X0Y2.CLKIN1
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/clk_125m_pllref_buf
+--------------------------------------------------------------------------------
+Slack: 4.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 8.000ns
+  Low pulse: 4.000ns
+  Low pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll/CLKIN1
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll/CLKIN1
+  Location pin: MMCME2_ADV_X1Y2.CLKIN1
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/clk_125m_pllref_buf
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk_125m_gtx_n_i = PERIOD TIMEGRP "clk_125m_gtx_n_i" 8 ns 
+HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 99 paths analyzed, 52 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.363ns.
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0 (SLICE_X71Y173.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.637ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/PERIPH/rst_net_n_o (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      1.731ns (Levels of Logic = 1)
+  Clock Path Skew:      -4.459ns (1.419 - 5.878)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Clock Uncertainty:    0.173ns
+
+  Clock Uncertainty:          0.173ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.096ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/PERIPH/rst_net_n_o to cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X49Y156.AQ     Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_sync_reset_txclk/data_i
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/PERIPH/rst_net_n_o
+    SLICE_X71Y173.C5     net (fanout=73)       1.444   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_sync_reset_txclk/data_i
+    SLICE_X71Y173.CLK    Tas                   0.018   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/serdes_rst_o1
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.731ns (0.287ns logic, 1.444ns route)
+                                                       (16.6% logic, 83.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0 (SLICE_X71Y173.C3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.820ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/U_MDIO_WB/mdio_mcr_pdown_int (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      1.568ns (Levels of Logic = 1)
+  Clock Path Skew:      -4.439ns (1.419 - 5.858)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Clock Uncertainty:    0.173ns
+
+  Clock Uncertainty:          0.173ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.096ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/U_MDIO_WB/mdio_mcr_pdown_int to cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X59Y178.DMUX   Tshcko                0.349   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/gen_16bit.U_RX_PCS/U_sync_power_down/data_i
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/U_MDIO_WB/mdio_mcr_pdown_int
+    SLICE_X71Y173.C3     net (fanout=4)        1.201   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/gen_16bit.U_RX_PCS/U_sync_power_down/data_i
+    SLICE_X71Y173.CLK    Tas                   0.018   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/serdes_rst_o1
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.568ns (0.367ns logic, 1.201ns route)
+                                                       (23.4% logic, 76.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0 (SLICE_X71Y173.C4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     2.652ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/U_MDIO_WB/mdio_mcr_reset_o (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      0.735ns (Levels of Logic = 1)
+  Clock Path Skew:      -4.440ns (1.419 - 5.859)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Clock Uncertainty:    0.173ns
+
+  Clock Uncertainty:          0.173ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.096ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/U_MDIO_WB/mdio_mcr_reset_o to cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X69Y174.CQ     Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/gen_16bit.U_RX_PCS/U_sync_mcr_reset/data_i
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/U_MDIO_WB/mdio_mcr_reset_o
+    SLICE_X71Y173.C4     net (fanout=8)        0.448   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/gen_16bit.U_RX_PCS/U_sync_mcr_reset/data_i
+    SLICE_X71Y173.CLK    Tas                   0.018   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_Endpoint/U_Wrapped_Endpoint/U_PCS_1000BASEX/serdes_rst_o1
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.735ns (0.287ns logic, 0.448ns route)
+                                                       (39.0% logic, 61.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk_125m_gtx_n_i = PERIOD TIMEGRP "clk_125m_gtx_n_i" 8 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_5 (SLICE_X90Y176.D5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.134ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_4 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.145ns (Levels of Logic = 1)
+  Clock Path Skew:      0.011ns (0.063 - 0.052)
+  Source Clock:         cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_4 to cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X91Y176.DQ     Tcko                  0.100   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt<4>
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_4
+    SLICE_X90Y176.D5     net (fanout=3)        0.104   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt<4>
+    SLICE_X90Y176.CLK    Tah         (-Th)     0.059   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt<5>
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/Mcount_p_reset_pulse.reset_cnt_xor<5>11
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.145ns (0.041ns logic, 0.104ns route)
+                                                       (28.3% logic, 71.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync1 (SLICE_X71Y173.AX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.161ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.161ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0 to cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X71Y173.CQ     Tcko                  0.100   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+    SLICE_X71Y173.AX     net (fanout=1)        0.101   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+    SLICE_X71Y173.CLK    Tckdi       (-Th)     0.040   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync0
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_EdgeDet_rst_i/sync1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.161ns (0.060ns logic, 0.101ns route)
+                                                       (37.3% logic, 62.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_5 (SLICE_X90Y176.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.200ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_3 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.200ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.clk_125m_gtx_buf rising at 8.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_3 to cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X90Y176.CQ     Tcko                  0.118   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt<5>
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_3
+    SLICE_X90Y176.D6     net (fanout=4)        0.141   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt<3>
+    SLICE_X90Y176.CLK    Tah         (-Th)     0.059   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt<5>
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/Mcount_p_reset_pulse.reset_cnt_xor<5>11
+                                                       cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/p_reset_pulse.reset_cnt_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.200ns (0.059ns logic, 0.141ns route)
+                                                       (29.5% logic, 70.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk_125m_gtx_n_i = PERIOD TIMEGRP "clk_125m_gtx_n_i" 8 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 4.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 8.000ns
+  Low pulse: 4.000ns
+  Low pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll_10m/CLKIN1
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll_10m/CLKIN1
+  Location pin: MMCME2_ADV_X0Y2.CLKIN1
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/clk_125m_pllref_buf
+--------------------------------------------------------------------------------
+Slack: 4.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 8.000ns
+  High pulse: 4.000ns
+  High pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll_10m/CLKIN1
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll_10m/CLKIN1
+  Location pin: MMCME2_ADV_X0Y2.CLKIN1
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/clk_125m_pllref_buf
+--------------------------------------------------------------------------------
+Slack: 4.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 8.000ns
+  Low pulse: 4.000ns
+  Low pulse limit: 2.000ns (Tmmcmpw_CLKIN1_100_150)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll/CLKIN1
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_sys_clk_pll/CLKIN1
+  Location pin: MMCME2_ADV_X1Y2.CLKIN1
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/clk_125m_pllref_buf
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: 
+TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_p
+lls_clk_dmtd         = PERIOD TIMEGRP         
+"cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_pll
+s_clk_dmtd"         TS_clk_20m_vcxo_i / 3.125 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 8095 paths analyzed, 1726 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.026ns.
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20 (SLICE_X76Y159.CE), 20 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     11.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.870ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.023ns (0.656 - 0.679)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y155.CQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2
+    SLICE_X55Y155.A1     net (fanout=3)        0.728   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<2>
+    SLICE_X55Y155.COUT   Topcya                0.366   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<0>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X75Y154.B1     net (fanout=19)       1.403   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X75Y154.B      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<7>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv1
+    SLICE_X76Y159.CE     net (fanout=6)        0.600   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv
+    SLICE_X76Y159.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20
+    -------------------------------------------------  ---------------------------
+    Total                                      3.870ns (1.139ns logic, 2.731ns route)
+                                                       (29.4% logic, 70.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.988ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.857ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.022ns (0.656 - 0.678)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X57Y158.AQ     Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<11>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8
+    SLICE_X55Y155.C1     net (fanout=3)        0.832   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<8>
+    SLICE_X55Y155.COUT   Topcyc                0.288   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<2>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X75Y154.B1     net (fanout=19)       1.403   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X75Y154.B      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<7>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv1
+    SLICE_X76Y159.CE     net (fanout=6)        0.600   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv
+    SLICE_X76Y159.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20
+    -------------------------------------------------  ---------------------------
+    Total                                      3.857ns (1.022ns logic, 2.835ns route)
+                                                       (26.5% logic, 73.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.998ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.846ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.023ns (0.656 - 0.679)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y155.DQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3
+    SLICE_X55Y155.B1     net (fanout=3)        0.693   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+    SLICE_X55Y155.COUT   Topcyb                0.377   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X75Y154.B1     net (fanout=19)       1.403   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X75Y154.B      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<7>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv1
+    SLICE_X76Y159.CE     net (fanout=6)        0.600   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv
+    SLICE_X76Y159.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_20
+    -------------------------------------------------  ---------------------------
+    Total                                      3.846ns (1.150ns logic, 2.696ns route)
+                                                       (29.9% logic, 70.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21 (SLICE_X76Y159.CE), 20 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     11.974ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.870ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.023ns (0.656 - 0.679)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y155.CQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2
+    SLICE_X55Y155.A1     net (fanout=3)        0.728   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<2>
+    SLICE_X55Y155.COUT   Topcya                0.366   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<0>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X75Y154.B1     net (fanout=19)       1.403   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X75Y154.B      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<7>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv1
+    SLICE_X76Y159.CE     net (fanout=6)        0.600   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv
+    SLICE_X76Y159.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21
+    -------------------------------------------------  ---------------------------
+    Total                                      3.870ns (1.139ns logic, 2.731ns route)
+                                                       (29.4% logic, 70.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.988ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.857ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.022ns (0.656 - 0.678)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X57Y158.AQ     Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<11>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8
+    SLICE_X55Y155.C1     net (fanout=3)        0.832   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<8>
+    SLICE_X55Y155.COUT   Topcyc                0.288   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<2>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X75Y154.B1     net (fanout=19)       1.403   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X75Y154.B      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<7>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv1
+    SLICE_X76Y159.CE     net (fanout=6)        0.600   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv
+    SLICE_X76Y159.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21
+    -------------------------------------------------  ---------------------------
+    Total                                      3.857ns (1.022ns logic, 2.835ns route)
+                                                       (26.5% logic, 73.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     11.998ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.846ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.023ns (0.656 - 0.679)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y155.DQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3
+    SLICE_X55Y155.B1     net (fanout=3)        0.693   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+    SLICE_X55Y155.COUT   Topcyb                0.377   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X75Y154.B1     net (fanout=19)       1.403   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X75Y154.B      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<7>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv1
+    SLICE_X76Y159.CE     net (fanout=6)        0.600   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0151_inv
+    SLICE_X76Y159.CLK    Tceck                 0.219   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/tag_o_21
+    -------------------------------------------------  ---------------------------
+    Total                                      3.846ns (1.150ns logic, 2.696ns route)
+                                                       (29.9% logic, 70.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1 (SLICE_X73Y153.CE), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     12.037ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.808ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.022ns (0.657 - 0.679)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y155.CQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_2
+    SLICE_X55Y155.A1     net (fanout=3)        0.728   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<2>
+    SLICE_X55Y155.COUT   Topcya                0.366   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<0>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X72Y153.B1     net (fanout=19)       1.384   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X72Y153.BMUX   Tilo                  0.187   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg<5>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0168_inv1
+    SLICE_X73Y153.CE     net (fanout=2)        0.398   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0168_inv
+    SLICE_X73Y153.CLK    Tceck                 0.244   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/U_sync_tag_strobe/data_i
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.808ns (1.298ns logic, 2.510ns route)
+                                                       (34.1% logic, 65.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     12.051ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.795ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.021ns (0.657 - 0.678)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X57Y158.AQ     Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<11>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_8
+    SLICE_X55Y155.C1     net (fanout=3)        0.832   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<8>
+    SLICE_X55Y155.COUT   Topcyc                0.288   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<2>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X72Y153.B1     net (fanout=19)       1.384   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X72Y153.BMUX   Tilo                  0.187   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg<5>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0168_inv1
+    SLICE_X73Y153.CE     net (fanout=2)        0.398   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0168_inv
+    SLICE_X73Y153.CLK    Tceck                 0.244   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/U_sync_tag_strobe/data_i
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.795ns (1.181ns logic, 2.614ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     12.061ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      3.784ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.022ns (0.657 - 0.679)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.133ns
+
+  Clock Uncertainty:          0.133ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.255ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X58Y155.DQ     Tcko                  0.308   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr_3
+    SLICE_X55Y155.B1     net (fanout=3)        0.693   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr<3>
+    SLICE_X55Y155.COUT   Topcyb                0.377   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_lut<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.CIN    net (fanout=1)        0.000   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<3>
+    SLICE_X55Y156.BMUX   Tcinb                 0.193   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mcompar_stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o_cy<5>
+    SLICE_X72Y153.B1     net (fanout=19)       1.384   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/stab_cntr[15]_deglitch_threshold_i[15]_equal_14_o
+    SLICE_X72Y153.BMUX   Tilo                  0.187   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg<5>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0168_inv1
+    SLICE_X73Y153.CE     net (fanout=2)        0.398   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/_n0168_inv
+    SLICE_X73Y153.CLK    Tceck                 0.244   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/U_sync_tag_strobe/data_i
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.784ns (1.309ns logic, 2.475ns route)
+                                                       (34.6% logic, 65.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_dmtd
+        = PERIOD TIMEGRP
+        "cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_dmtd"
+        TS_clk_20m_vcxo_i / 3.125 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/q_p_o (SLICE_X20Y114.A5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.122ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/out_ext (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/q_p_o (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.133ns (Levels of Logic = 1)
+  Clock Path Skew:      0.011ns (0.063 - 0.052)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/out_ext to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/q_p_o
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y114.AQ     Tcko                  0.100   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/out_ext
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/out_ext
+    SLICE_X20Y114.A5     net (fanout=2)        0.092   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/out_ext
+    SLICE_X20Y114.CLK    Tah         (-Th)     0.059   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/q_p_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/out_ext_d_in2out[2]_AND_88_o1
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/gen_external_timebase.U_Sync_Gate/q_p_o
+    -------------------------------------------------  ---------------------------
+    Total                                      0.133ns (0.041ns logic, 0.092ns route)
+                                                       (30.8% logic, 69.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/synced_o (SLICE_X74Y152.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.126ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/sync1 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/synced_o (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.137ns (Levels of Logic = 0)
+  Clock Path Skew:      0.011ns (0.063 - 0.052)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/sync1 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/synced_o
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X75Y152.BMUX   Tshcko                0.127   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/U_Sync_Resync_Pulse/sync1
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/sync1
+    SLICE_X74Y152.DX     net (fanout=1)        0.055   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/sync1
+    SLICE_X74Y152.CLK    Tckdi       (-Th)     0.045   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/synced_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_ref_dmtds[0].DMTD_REF/U_Sync_Resync_Pulse/synced_o
+    -------------------------------------------------  ---------------------------
+    Total                                      0.137ns (0.082ns logic, 0.055ns route)
+                                                       (59.9% logic, 40.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1 (SLICE_X73Y153.A5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.139ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.150ns (Levels of Logic = 1)
+  Clock Path Skew:      0.011ns (0.063 - 0.052)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_dmtd rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_2 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X72Y153.AQ     Tcko                  0.118   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg<5>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_2
+    SLICE_X73Y153.A5     net (fanout=1)        0.077   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg<2>
+    SLICE_X73Y153.CLK    Tah         (-Th)     0.045   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/U_sync_tag_strobe/data_i
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/Mmux_state[1]_X_44_o_wide_mux_20_OUT21
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/gen_feedback_dmtds[0].DMTD_FB/new_edge_sreg_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.150ns (0.073ns logic, 0.077ns route)
+                                                       (48.7% logic, 51.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_dmtd
+        = PERIOD TIMEGRP
+        "cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_dmtd"
+        TS_clk_20m_vcxo_i / 3.125 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 14.400ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 1.600ns (625.000MHz) (Tbcper_I(Fmax))
+  Physical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_clk_dmtd_buf_o/I0
+  Logical resource: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.cmp_clk_dmtd_buf_o/I0
+  Location pin: BUFGCTRL_X0Y4.I0
+  Clock network: cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_plls.clk_dmtd
+--------------------------------------------------------------------------------
+Slack: 15.200ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 16.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.400ns (Trpw)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/cntr_meas<3>/SR
+  Logical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/cntr_meas_0/SR
+  Location pin: SLICE_X22Y121.SR
+  Clock network: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/MINI_NIC/U_Wrapped_Minic/RX_FIFO/U_Inferred_FIFO/rst_n_i_inv
+--------------------------------------------------------------------------------
+Slack: 15.200ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 16.000ns
+  High pulse: 8.000ns
+  High pulse limit: 0.400ns (Trpw)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/cntr_meas<3>/SR
+  Logical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_Meas_DMTD_Freq/cntr_meas_1/SR
+  Location pin: SLICE_X22Y121.SR
+  Clock network: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/MINI_NIC/U_Wrapped_Minic/RX_FIFO/U_Inferred_FIFO/rst_n_i_inv
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: 
+TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_p
+lls_clk_sys         = PERIOD TIMEGRP         
+"cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_pll
+s_clk_sys"         TS_clk_125m_gtx_p_i / 0.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.292ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_sys
+        = PERIOD TIMEGRP
+        "cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_sys"
+        TS_clk_125m_gtx_p_i / 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 12.708ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 3.292ns (303.767MHz) (Tdspper_AREG_PREG_MULT)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/multiplier/Mmult_a0[15]_b0[15]_MuLt_9_OUT/CLK
+  Logical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/multiplier/Mmult_a0[15]_b0[15]_MuLt_9_OUT/CLK
+  Location pin: DSP48_X2Y58.CLK
+  Clock network: cmp_xwrc_board_clbv2/clk_pll_62m5
+--------------------------------------------------------------------------------
+Slack: 13.505ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 2.495ns (400.802MHz) (Trper_CLKA)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/spll_trr_INST/wrapped_fifo/U_Inferred_FIFO/U_FIFO_Ram/gen_single_clk.U_RAM_SC/Mram_ram/CLKARDCLKL
+  Logical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/spll_trr_INST/wrapped_fifo/U_Inferred_FIFO/U_FIFO_Ram/gen_single_clk.U_RAM_SC/Mram_ram/CLKARDCLKL
+  Location pin: RAMB36_X2Y32.CLKARDCLKL
+  Clock network: cmp_xwrc_board_clbv2/clk_pll_62m5
+--------------------------------------------------------------------------------
+Slack: 13.505ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 2.495ns (400.802MHz) (Trper_CLKA)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/spll_trr_INST/wrapped_fifo/U_Inferred_FIFO/U_FIFO_Ram/gen_single_clk.U_RAM_SC/Mram_ram/CLKARDCLKU
+  Logical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/spll_trr_INST/wrapped_fifo/U_Inferred_FIFO/U_FIFO_Ram/gen_single_clk.U_RAM_SC/Mram_ram/CLKARDCLKU
+  Location pin: RAMB36_X2Y32.CLKARDCLKU
+  Clock network: cmp_xwrc_board_clbv2/clk_pll_62m5
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: 
+TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_p
+lls_clk_sys_0         = PERIOD TIMEGRP         
+"cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_pll
+s_clk_sys_0"         TS_clk_125m_gtx_n_i / 0.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 336703 paths analyzed, 22312 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.382ns.
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0 (SLICE_X39Y154.B5), 103 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.618ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_adr_o_5 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      7.186ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.120ns (1.280 - 1.400)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_adr_o_5 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y148.AQ     Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_adr_o<12>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_adr_o_5
+    SLICE_X44Y156.C1     net (fanout=4)        0.950   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_adr_o<5>
+    SLICE_X44Y156.C      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/PERIPH/SYSCON/regs_o_gpsr_net_rst_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/mux5911
+    SLICE_X13Y169.A5     net (fanout=4)        1.097   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_slave_i[1]_adr<5>
+    SLICE_X13Y169.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/PERIPH/SYSCON/rddata_reg<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[1]_adr<5>1
+    SLICE_X37Y156.C1     net (fanout=168)      1.530   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[1]_adr<5>
+    SLICE_X37Y156.C      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/secbar_master_o[2]_adr<5>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_SECONDARY_CON/crossbar/master_oe[2]_adr<5>1
+    SLICE_X20Y126.A6     net (fanout=40)       1.313   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/secbar_master_o[2]_adr<5>
+    SLICE_X20Y126.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT42
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT43
+    SLICE_X39Y154.A2     net (fanout=1)        1.549   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT42
+    SLICE_X39Y154.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT44
+    SLICE_X39Y154.B5     net (fanout=1)        0.194   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT44
+    SLICE_X39Y154.CLK    Tas                   0.019   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT46
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                      7.186ns (0.553ns logic, 6.633ns route)
+                                                       (7.7% logic, 92.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.784ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      7.114ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.026ns (0.663 - 0.689)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y154.AMUX   Tshcko                0.382   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_addr_reg<14>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy
+    SLICE_X44Y156.C2     net (fanout=40)       0.765   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy
+    SLICE_X44Y156.C      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/PERIPH/SYSCON/regs_o_gpsr_net_rst_o
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/mux5911
+    SLICE_X13Y169.A5     net (fanout=4)        1.097   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_slave_i[1]_adr<5>
+    SLICE_X13Y169.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/PERIPH/SYSCON/rddata_reg<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[1]_adr<5>1
+    SLICE_X37Y156.C1     net (fanout=168)      1.530   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[1]_adr<5>
+    SLICE_X37Y156.C      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/secbar_master_o[2]_adr<5>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_SECONDARY_CON/crossbar/master_oe[2]_adr<5>1
+    SLICE_X20Y126.A6     net (fanout=40)       1.313   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/secbar_master_o[2]_adr<5>
+    SLICE_X20Y126.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT42
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT43
+    SLICE_X39Y154.A2     net (fanout=1)        1.549   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT42
+    SLICE_X39Y154.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT44
+    SLICE_X39Y154.B5     net (fanout=1)        0.194   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT44
+    SLICE_X39Y154.CLK    Tas                   0.019   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT46
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                      7.114ns (0.666ns logic, 6.448ns route)
+                                                       (9.4% logic, 90.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.940ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/load_store_unit/d_adr_o_5 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      6.866ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.118ns (1.280 - 1.398)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/load_store_unit/d_adr_o_5 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y141.DQ     Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/load_store_unit/d_adr_o<5>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/load_store_unit/d_adr_o_5
+    SLICE_X13Y169.A2     net (fanout=6)        1.780   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/load_store_unit/d_adr_o<5>
+    SLICE_X13Y169.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/PERIPH/SYSCON/rddata_reg<21>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[1]_adr<5>1
+    SLICE_X37Y156.C1     net (fanout=168)      1.530   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[1]_adr<5>
+    SLICE_X37Y156.C      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/secbar_master_o[2]_adr<5>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_SECONDARY_CON/crossbar/master_oe[2]_adr<5>1
+    SLICE_X20Y126.A6     net (fanout=40)       1.313   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/secbar_master_o[2]_adr<5>
+    SLICE_X20Y126.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT42
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT43
+    SLICE_X39Y154.A2     net (fanout=1)        1.549   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT42
+    SLICE_X39Y154.A      Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT44
+    SLICE_X39Y154.B5     net (fanout=1)        0.194   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT44
+    SLICE_X39Y154.CLK    Tas                   0.019   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg<1>
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/Mmux_rwaddr_reg[5]_rddata_reg[31]_wide_mux_5_OUT46
+                                                       cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/rddata_reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                      6.866ns (0.500ns logic, 6.366ns route)
+                                                       (7.3% logic, 92.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 (RAMB36_X4Y38.WEAL2), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.765ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      7.133ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.026ns (1.240 - 1.266)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X46Y154.AMUX      Tshcko                0.382   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_addr_reg<14>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy
+    SLICE_X48Y156.B2        net (fanout=40)       0.932   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy
+    SLICE_X48Y156.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/I_STB_O1
+    SLICE_X43Y149.B5        net (fanout=33)       0.719   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+    SLICE_X43Y149.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/slave1_out_ack
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[0]_stb1
+    SLICE_X47Y144.A2        net (fanout=2)        0.733   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[0]_stb
+    SLICE_X47Y144.A         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<0>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea1
+    SLICE_X47Y142.D1        net (fanout=2)        0.583   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea
+    SLICE_X47Y142.DMUX      Tilo                  0.179   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<2>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>1
+    RAMB36_X4Y38.WEAL2      net (fanout=64)       2.995   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>
+    RAMB36_X4Y38.CLKARDCLKL Trcck_WEA             0.451   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    ----------------------------------------------------  ---------------------------
+    Total                                         7.133ns (1.171ns logic, 5.962ns route)
+                                                          (16.4% logic, 83.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.125ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      6.776ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.023ns (1.240 - 1.263)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X48Y151.AQ        Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o
+    SLICE_X48Y156.B3        net (fanout=63)       0.688   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o
+    SLICE_X48Y156.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/I_STB_O1
+    SLICE_X43Y149.B5        net (fanout=33)       0.719   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+    SLICE_X43Y149.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/slave1_out_ack
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[0]_stb1
+    SLICE_X47Y144.A2        net (fanout=2)        0.733   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[0]_stb
+    SLICE_X47Y144.A         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<0>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea1
+    SLICE_X47Y142.D1        net (fanout=2)        0.583   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea
+    SLICE_X47Y142.DMUX      Tilo                  0.179   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<2>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>1
+    RAMB36_X4Y38.WEAL2      net (fanout=64)       2.995   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>
+    RAMB36_X4Y38.CLKARDCLKL Trcck_WEA             0.451   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    ----------------------------------------------------  ---------------------------
+    Total                                         6.776ns (1.058ns logic, 5.718ns route)
+                                                          (15.6% logic, 84.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.223ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      6.680ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.021ns (1.240 - 1.261)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining_2 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X48Y157.CQ        Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining<2>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining_2
+    SLICE_X48Y156.B1        net (fanout=5)        0.592   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining<2>
+    SLICE_X48Y156.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/I_STB_O1
+    SLICE_X43Y149.B5        net (fanout=33)       0.719   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+    SLICE_X43Y149.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/slave1_out_ack
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[0]_stb1
+    SLICE_X47Y144.A2        net (fanout=2)        0.733   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[0]_stb
+    SLICE_X47Y144.A         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<0>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea1
+    SLICE_X47Y142.D1        net (fanout=2)        0.583   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea
+    SLICE_X47Y142.DMUX      Tilo                  0.179   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<2>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>1
+    RAMB36_X4Y38.WEAL2      net (fanout=64)       2.995   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>
+    RAMB36_X4Y38.CLKARDCLKL Trcck_WEA             0.451   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    ----------------------------------------------------  ---------------------------
+    Total                                         6.680ns (1.058ns logic, 5.622ns route)
+                                                          (15.8% logic, 84.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 (RAMB36_X4Y38.WEAL3), 18 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     8.765ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      7.133ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.026ns (1.240 - 1.266)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X46Y154.AMUX      Tshcko                0.382   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_addr_reg<14>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy
+    SLICE_X48Y156.B2        net (fanout=40)       0.932   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_was_busy
+    SLICE_X48Y156.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/I_STB_O1
+    SLICE_X43Y149.B5        net (fanout=33)       0.719   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+    SLICE_X43Y149.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/slave1_out_ack
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[0]_stb1
+    SLICE_X47Y144.A2        net (fanout=2)        0.733   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[0]_stb
+    SLICE_X47Y144.A         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<0>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea1
+    SLICE_X47Y142.D1        net (fanout=2)        0.583   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea
+    SLICE_X47Y142.DMUX      Tilo                  0.179   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<2>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>1
+    RAMB36_X4Y38.WEAL3      net (fanout=64)       2.995   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>
+    RAMB36_X4Y38.CLKARDCLKL Trcck_WEA             0.451   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    ----------------------------------------------------  ---------------------------
+    Total                                         7.133ns (1.171ns logic, 5.962ns route)
+                                                          (16.4% logic, 83.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.125ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      6.776ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.023ns (1.240 - 1.263)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X48Y151.AQ        Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o
+    SLICE_X48Y156.B3        net (fanout=63)       0.688   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/i_stb_o
+    SLICE_X48Y156.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/I_STB_O1
+    SLICE_X43Y149.B5        net (fanout=33)       0.719   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+    SLICE_X43Y149.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/slave1_out_ack
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[0]_stb1
+    SLICE_X47Y144.A2        net (fanout=2)        0.733   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[0]_stb
+    SLICE_X47Y144.A         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<0>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea1
+    SLICE_X47Y142.D1        net (fanout=2)        0.583   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea
+    SLICE_X47Y142.DMUX      Tilo                  0.179   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<2>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>1
+    RAMB36_X4Y38.WEAL3      net (fanout=64)       2.995   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>
+    RAMB36_X4Y38.CLKARDCLKL Trcck_WEA             0.451   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    ----------------------------------------------------  ---------------------------
+    Total                                         6.776ns (1.058ns logic, 5.718ns route)
+                                                          (15.6% logic, 84.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     9.223ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining_2 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31 (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      6.680ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.021ns (1.240 - 1.261)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 0.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.076ns
+
+  Clock Uncertainty:          0.076ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.135ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining_2 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X48Y157.CQ        Tcko                  0.269   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining<2>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining_2
+    SLICE_X48Y156.B1        net (fanout=5)        0.592   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/inst_remaining<2>
+    SLICE_X48Y156.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/I_STB_O1
+    SLICE_X43Y149.B5        net (fanout=33)       0.719   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/Mmux_inst_addr_reg[31]_inst_addr_reg[31]_mux_11_OUT2
+    SLICE_X43Y149.B         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/slave1_out_ack
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/WB_CON/crossbar/master_oe[0]_stb1
+    SLICE_X47Y144.A2        net (fanout=2)        0.733   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/cbar_master_o[0]_stb
+    SLICE_X47Y144.A         Tilo                  0.053   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<0>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea1
+    SLICE_X47Y142.D1        net (fanout=2)        0.583   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/s_wea
+    SLICE_X47Y142.DMUX      Tilo                  0.179   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<2>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>1
+    RAMB36_X4Y38.WEAL3      net (fanout=64)       2.995   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/s_we_a<3>
+    RAMB36_X4Y38.CLKARDCLKL Trcck_WEA             0.451   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/DPRAM/U_DPRAM/gen_splitram.U_RAM_SPLIT/Mram_ram31
+    ----------------------------------------------------  ---------------------------
+    Total                                         6.680ns (1.058ns logic, 5.622ns route)
+                                                          (15.8% logic, 84.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_sys_0
+        = PERIOD TIMEGRP
+        "cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_sys_0"
+        TS_clk_125m_gtx_n_i / 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram (RAMB36_X2Y29.ADDRARDADDRL13), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.001ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address_10 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.231ns (Levels of Logic = 0)
+  Clock Path Skew:      0.230ns (0.711 - 0.481)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address_10 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X56Y145.AQ            Tcko                  0.100   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address<13>
+                                                              cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address_10
+    RAMB36_X2Y29.ADDRARDADDRL13 net (fanout=6)        0.314   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address<10>
+    RAMB36_X2Y29.CLKARDCLKL     Trckc_ADDRA (-Th)     0.183   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+                                                              cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+    --------------------------------------------------------  ---------------------------
+    Total                                             0.231ns (-0.083ns logic, 0.314ns route)
+                                                              (-35.9% logic, 135.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram (RAMB36_X2Y29.ADDRARDADDRU13), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.001ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address_10 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.231ns (Levels of Logic = 0)
+  Clock Path Skew:      0.230ns (0.711 - 0.481)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address_10 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+    Location                    Delay type         Delay(ns)  Physical Resource
+                                                              Logical Resource(s)
+    --------------------------------------------------------  -------------------
+    SLICE_X56Y145.AQ            Tcko                  0.100   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address<13>
+                                                              cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address_10
+    RAMB36_X2Y29.ADDRARDADDRU13 net (fanout=6)        0.314   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/refill_address<10>
+    RAMB36_X2Y29.CLKARDCLKU     Trckc_ADDRA (-Th)     0.183   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+                                                              cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+    --------------------------------------------------------  ---------------------------
+    Total                                             0.231ns (-0.083ns logic, 0.314ns route)
+                                                              (-35.9% logic, 135.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram (RAMB36_X2Y29.DIADI0), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.008ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache_refill_data_0 (FF)
+  Destination:          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.068ns (Levels of Logic = 0)
+  Clock Path Skew:      0.060ns (0.358 - 0.298)
+  Source Clock:         cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Destination Clock:    cmp_xwrc_board_clbv2/clk_pll_62m5 rising at 16.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache_refill_data_0 to cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X39Y146.AQ        Tcko                  0.100   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache_refill_data<3>
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache_refill_data_0
+    RAMB36_X2Y29.DIADI0     net (fanout=1)        0.264   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache_refill_data<0>
+    RAMB36_X2Y29.CLKARDCLKL Trckd_DIA   (-Th)     0.296   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+                                                          cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/instruction_unit/icache/memories[0].way_0_data_ram/ram/true_dp/gen_single_clk.U_RAM_SC/Mram_ram
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.068ns (-0.196ns logic, 0.264ns route)
+                                                          (-288.2% logic, 388.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_sys_0
+        = PERIOD TIMEGRP
+        "cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_plls_clk_sys_0"
+        TS_clk_125m_gtx_n_i / 0.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 12.708ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 3.292ns (303.767MHz) (Tdspper_AREG_PREG_MULT)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/multiplier/Mmult_a0[15]_b0[15]_MuLt_9_OUT/CLK
+  Logical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/LM32_CORE/gen_profile_medium_icache.U_Wrapped_LM32/cpu/multiplier/Mmult_a0[15]_b0[15]_MuLt_9_OUT/CLK
+  Location pin: DSP48_X2Y58.CLK
+  Clock network: cmp_xwrc_board_clbv2/clk_pll_62m5
+--------------------------------------------------------------------------------
+Slack: 13.505ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 2.495ns (400.802MHz) (Trper_CLKA)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/spll_trr_INST/wrapped_fifo/U_Inferred_FIFO/U_FIFO_Ram/gen_single_clk.U_RAM_SC/Mram_ram/CLKARDCLKL
+  Logical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/spll_trr_INST/wrapped_fifo/U_Inferred_FIFO/U_FIFO_Ram/gen_single_clk.U_RAM_SC/Mram_ram/CLKARDCLKL
+  Location pin: RAMB36_X2Y32.CLKARDCLKL
+  Clock network: cmp_xwrc_board_clbv2/clk_pll_62m5
+--------------------------------------------------------------------------------
+Slack: 13.505ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 2.495ns (400.802MHz) (Trper_CLKA)
+  Physical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/spll_trr_INST/wrapped_fifo/U_Inferred_FIFO/U_FIFO_Ram/gen_single_clk.U_RAM_SC/Mram_ram/CLKARDCLKU
+  Logical resource: cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_Softpll/U_WB_SLAVE/spll_trr_INST/wrapped_fifo/U_Inferred_FIFO/U_FIFO_Ram/gen_single_clk.U_RAM_SC/Mram_ram/CLKARDCLKU
+  Location pin: RAMB36_X2Y32.CLKARDCLKU
+  Clock network: cmp_xwrc_board_clbv2/clk_pll_62m5
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_clk_20m_vcxo_i
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_20m_vcxo_i              |     50.000ns|     20.000ns|     12.581ns|            0|            0|           30|         8095|
+| TS_cmp_xwrc_board_clbv2_cmp_xw|     16.000ns|      4.026ns|          N/A|            0|            0|         8095|            0|
+| rc_platform_gen_default_plls_g|             |             |             |             |             |             |             |
+| en_kintex7_default_plls_clk_dm|             |             |             |             |             |             |             |
+| td                            |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_clk_125m_gtx_p_i
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_125m_gtx_p_i            |      8.000ns|      4.000ns|      1.646ns|            0|            0|            0|            0|
+| TS_cmp_xwrc_board_clbv2_cmp_xw|     16.000ns|      3.292ns|          N/A|            0|            0|            0|            0|
+| rc_platform_gen_default_plls_g|             |             |             |             |             |             |             |
+| en_kintex7_default_plls_clk_sy|             |             |             |             |             |             |             |
+| s                             |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_clk_125m_gtx_n_i
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_clk_125m_gtx_n_i            |      8.000ns|      6.363ns|      3.691ns|            0|            0|           99|       336703|
+| TS_cmp_xwrc_board_clbv2_cmp_xw|     16.000ns|      7.382ns|          N/A|            0|            0|       336703|            0|
+| rc_platform_gen_default_plls_g|             |             |             |             |             |             |             |
+| en_kintex7_default_plls_clk_sy|             |             |             |             |             |             |             |
+| s_0                           |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk_20m_vcxo_i
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_20m_vcxo_i |    4.026|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_125m_gtx_n_i
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk_125m_gtx_n_i|    7.382|         |         |         |
+clk_125m_gtx_p_i|    7.382|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_125m_gtx_p_i
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk_125m_gtx_n_i|    7.382|         |         |         |
+clk_125m_gtx_p_i|    7.382|         |         |         |
+----------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 344927 paths, 0 nets, and 31507 connections
+
+Design statistics:
+   Minimum period:  20.000ns{1}   (Maximum frequency:  50.000MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Mar 14 15:17:08 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 999 MB
+
+
+

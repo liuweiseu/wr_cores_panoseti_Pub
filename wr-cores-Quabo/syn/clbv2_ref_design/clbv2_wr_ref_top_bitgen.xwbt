@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores-Quabo/syn/clbv2_ref_design/clbv2_wr_ref_top.ncd
+OUTFILE=/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores-Quabo/syn/clbv2_ref_design/clbv2_wr_ref_top.bit
+FAMILY=Kintex7
+PART=xc7k160t-1fbg676
+WORKINGDIR=/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores-Quabo/syn/clbv2_ref_design
+LICENSE=WebPack
+USER_INFO=__0_0_0

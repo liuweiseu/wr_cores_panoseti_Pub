@@ -1,0 +1,128 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line:
+/home/wei/Software/ISE14.7/install/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -sd ../../platform/xilinx/chipscope -sd
+../../ip_cores/gn4124-core/hdl/spec/ip_cores -nt timestamp -uc
+/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-core
+s-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf -bm
+/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-core
+s-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.bmm -p xc7k160t-fbg676-1
+clbv2_wr_ref_top.ngc clbv2_wr_ref_top.ngd
+
+Reading NGO file
+"/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cor
+es-Quabo/syn/clbv2_ref_design/clbv2_wr_ref_top.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cor
+es-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem - Constraint <NET "clk_125m_gtx_p_i" TNM_NET =
+   clk_125m_gtx_p_i;>
+   [/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-
+   cores-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf(19)] was not
+   distributed to the output pin TXOUTCLK of block
+   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/gtx
+   e2_i because the signal path to this output pin depends upon block attribute
+   settings. Constraint distribution does not support attribute dependent
+   distribution.
+
+WARNING:ConstraintSystem - Constraint <NET "clk_125m_gtx_p_i" TNM_NET =
+   clk_125m_gtx_p_i;>
+   [/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-
+   cores-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf(19)] was not
+   distributed to the output pin RXOUTCLK of block
+   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/gtx
+   e2_i because the signal path to this output pin depends upon block attribute
+   settings. Constraint distribution does not support attribute dependent
+   distribution.
+
+WARNING:ConstraintSystem - Constraint <NET "clk_125m_gtx_n_i" TNM_NET =
+   clk_125m_gtx_n_i;>
+   [/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-
+   cores-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf(21)] was not
+   distributed to the output pin TXOUTCLK of block
+   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/gtx
+   e2_i because the signal path to this output pin depends upon block attribute
+   settings. Constraint distribution does not support attribute dependent
+   distribution.
+
+WARNING:ConstraintSystem - Constraint <NET "clk_125m_gtx_n_i" TNM_NET =
+   clk_125m_gtx_n_i;>
+   [/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-
+   cores-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.ucf(21)] was not
+   distributed to the output pin RXOUTCLK of block
+   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_phy_kintex7.cmp_gtx/U_GTX_INST/gtx
+   e2_i because the signal path to this output pin depends upon block attribute
+   settings. Constraint distribution does not support attribute dependent
+   distribution.
+
+INFO:ConstraintSystem:178 - TNM 'clk_20m_vcxo_i', used in period specification
+   'TS_clk_20m_vcxo_i', was traced into MMCME2_ADV instance
+   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_p
+   lls.cmp_dmtd_clk_pll. The following new TNM groups and period specifications
+   were generated at the MMCME2_ADV output(s): 
+   CLKOUT0: <TIMESPEC
+   TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_defaul
+   t_plls_clk_dmtd = PERIOD
+   "cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_
+   plls_clk_...>
+
+INFO:ConstraintSystem:178 - TNM 'clk_125m_gtx_p_i', used in period specification
+   'TS_clk_125m_gtx_p_i', was traced into MMCME2_ADV instance
+   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_p
+   lls.cmp_sys_clk_pll. The following new TNM groups and period specifications
+   were generated at the MMCME2_ADV output(s): 
+   CLKOUT0: <TIMESPEC
+   TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_defaul
+   t_plls_clk_sys = PERIOD
+   "cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_
+   plls_clk_s...>
+
+INFO:ConstraintSystem:178 - TNM 'clk_125m_gtx_n_i', used in period specification
+   'TS_clk_125m_gtx_n_i', was traced into MMCME2_ADV instance
+   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_p
+   lls.cmp_sys_clk_pll. The following new TNM groups and period specifications
+   were generated at the MMCME2_ADV output(s): 
+   CLKOUT0: <TIMESPEC
+   TS_cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_defaul
+   t_plls_clk_sys_0 = PERIOD
+   "cmp_xwrc_board_clbv2_cmp_xwrc_platform_gen_default_plls_gen_kintex7_default_
+   plls_clk...>
+
+Done...
+
+Processing BMM file
+"/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cor
+es-Quabo/top/clbv2_ref_design/clbv2_wr_ref_top.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:478 - clock net
+   cmp_xwrc_board_clbv2/cmp_board_common/cmp_xwr_core/WRPC/U_SOFTPLL/U_Wrapped_S
+   oftpll/gen_with_ext_clock_input.U_DMTD_EXT/clk_in with clock driver
+   cmp_xwrc_board_clbv2/cmp_xwrc_platform/gen_default_plls.gen_kintex7_default_p
+   lls.gen_kintex7_ext_ref_pll.cmp_clk_ext_buf_o drives no clock pins
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   5
+
+Total memory usage is 516992 kilobytes
+
+Writing NGD file "clbv2_wr_ref_top.ngd" ...
+Total REAL time to NGDBUILD completion:  21 sec
+Total CPU time to NGDBUILD completion:   19 sec
+
+Writing NGDBUILD log file "clbv2_wr_ref_top.bld"...

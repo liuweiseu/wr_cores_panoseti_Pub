@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o /media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design//QuadrantBoard -s 32768 -u 0000 /media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design/clbv2_wr_ref_top.bit -spi 
+
+PROM /media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design/QuadrantBoard.prm map: Mon Jan 14 14:27:06 2019
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          32768K
+PROM start    0000:0000
+PROM end      01ff:ffff
+PROM checksum c81a9dfd
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0037:9df3     Jan 14 14:19:57 2019 /media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/syn/clbv2_ref_design/clbv2_wr_ref_top.bit

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="spec_wr_ref" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="ManualCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>chipscope_icon.ngc (/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/platform/xilinx/chipscope/chipscope_icon.ngc)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000212000000020000000000000000000000000000000064ffffffff0000008100000000000000020000017500000001000000000000009d0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>chipscope_icon.ngc (/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/platform/xilinx/chipscope/chipscope_icon.ngc)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_NGC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000ef000000010000000100000000000000000000000064ffffffff000000810000000000000001000000ef0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000890000000040101000100000000000000000000000064ffffffff0000008100000000000000040000013a0000000100000000000000de00000001000000000000008f0000000100000000000005e90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>axi4_pkg.vhd</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000128000000010001000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015d0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000293000000010000000100000000000000000000000064ffffffff000000810000000000000001000002930000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001560000012001000000060100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/eb_master_slave_wrapper - behavioral |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|etherbone-core|hdl|eb_master_core|eb_master_slave_wrapper.vhd</ClosedNode>
+         <ClosedNode>/eb_slave_core - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|etherbone-core|hdl|eb_slave_core|eb_slave_core.vhd</ClosedNode>
+         <ClosedNode>/eca_ac_wbm - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_eca|eca_ac_wbm.vhd</ClosedNode>
+         <ClosedNode>/eca_queue - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_eca|eca_queue.vhd</ClosedNode>
+         <ClosedNode>/eca_tlu - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_eca|eca_tlu.vhd</ClosedNode>
+         <ClosedNode>/eca_wb_event - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_eca|eca_wb_event.vhd</ClosedNode>
+         <ClosedNode>/ez_usb - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|etherbone-core|hdl|eb_usb_core|ez_usb.vhd</ClosedNode>
+         <ClosedNode>/gc_async_signals_input_stage - behav |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|common|gc_async_signals_input_stage.vhd</ClosedNode>
+         <ClosedNode>/gc_moving_average - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|common|gc_moving_average.vhd</ClosedNode>
+         <ClosedNode>/gc_rr_arbiter - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|common|gc_rr_arbiter.vhd</ClosedNode>
+         <ClosedNode>/gc_single_reset_gen - behavioral |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|common|gc_single_reset_gen.vhd</ClosedNode>
+         <ClosedNode>/hpll_period_detect - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|timing|hpll_period_detect.vhd</ClosedNode>
+         <ClosedNode>/minic_packet_buffer - syn |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_mini_nic|minic_packet_buffer.vhd</ClosedNode>
+         <ClosedNode>/multi_dmtd_with_deglitcher - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|timing|multi_dmtd_with_deglitcher.vhd</ClosedNode>
+         <ClosedNode>/rx_streamer - wrapper |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_streamers|rx_streamer.vhd</ClosedNode>
+         <ClosedNode>/spec_wr_ref_top - top |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|top|spec_ref_design|spec_wr_ref_top.vhd</ClosedNode>
+         <ClosedNode>/spll_period_detect - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_softpll_ng|spll_period_detect.vhd</ClosedNode>
+         <ClosedNode>/tx_streamer - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_streamers|tx_streamer.vhd</ClosedNode>
+         <ClosedNode>/vme64x_core - unwrap |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|vme64x-core|hdl|rtl|vme64x_core.vhd</ClosedNode>
+         <ClosedNode>/wb_axi4lite_bridge - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_axi4lite_bridge|wb_axi4lite_bridge.vhd</ClosedNode>
+         <ClosedNode>/wb_fabric_sink - wrapper |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|fabric|xwb_fabric_sink.vhd</ClosedNode>
+         <ClosedNode>/wb_fabric_source - wrapper |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|fabric|xwb_fabric_source.vhd</ClosedNode>
+         <ClosedNode>/wb_i2c_bridge - behav |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_i2c_bridge|wb_i2c_bridge.vhd</ClosedNode>
+         <ClosedNode>/wb_irq_lm32 - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_irq|wb_irq_lm32.vhd</ClosedNode>
+         <ClosedNode>/wb_irq_master - behavioral |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_irq|wb_irq_master.vhd</ClosedNode>
+         <ClosedNode>/wb_irq_timer - behavioral |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_irq|wb_irq_timer.vhd</ClosedNode>
+         <ClosedNode>/wb_serial_lcd - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_serial_lcd|wb_serial_lcd.vhd</ClosedNode>
+         <ClosedNode>/wb_spi_flash - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_spi_flash|wb_spi_flash.vhd</ClosedNode>
+         <ClosedNode>/wbgen2_dpssram - syn |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wbgen2|wbgen2_dpssram.vhd</ClosedNode>
+         <ClosedNode>/wbgen2_fifo_async - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wbgen2|wbgen2_fifo_async.vhd</ClosedNode>
+         <ClosedNode>/wr_eca - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_eca|wr_eca.vhd</ClosedNode>
+         <ClosedNode>/wr_tbi_phy - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_tbi_phy|wr_tbi_phy.vhd</ClosedNode>
+         <ClosedNode>/wr_tlu - behavioral |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_tlu|tlu.vhd</ClosedNode>
+         <ClosedNode>/wrc_board_spec - std_wrapper |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|board|spec|wrc_board_spec.vhd</ClosedNode>
+         <ClosedNode>/wrf_loopback - behav |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|fabric|xwrf_loopback|wrf_loopback.vhd</ClosedNode>
+         <ClosedNode>/xwb_async_bridge - wrapper |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_async_bridge|xwb_async_bridge.vhd</ClosedNode>
+         <ClosedNode>/xwb_bus_fanout - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_bus_fanout|xwb_bus_fanout.vhd</ClosedNode>
+         <ClosedNode>/xwb_gpio_port - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_gpio_port|xwb_gpio_port.vhd</ClosedNode>
+         <ClosedNode>/xwb_i2c_master - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_i2c_master|xwb_i2c_master.vhd</ClosedNode>
+         <ClosedNode>/xwb_register_link - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_crossbar|xwb_register_link.vhd</ClosedNode>
+         <ClosedNode>/xwb_simple_pwm - wrapper |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_simple_pwm|xwb_simple_pwm.vhd</ClosedNode>
+         <ClosedNode>/xwb_spi - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_spi|xwb_spi.vhd</ClosedNode>
+         <ClosedNode>/xwb_tics - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_simple_timer|xwb_tics.vhd</ClosedNode>
+         <ClosedNode>/xwb_vic - wrapper |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|modules|wishbone|wb_vic|xwb_vic.vhd</ClosedNode>
+         <ClosedNode>/xwb_xil_multiboot - struct |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|platform|xilinx|wb_xil_multiboot|xwb_xil_multiboot.vhd</ClosedNode>
+         <ClosedNode>/xwb_xilinx_fpga_loader - rtl |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|ip_cores|general-cores|platform|xilinx|wb_xilinx_fpga_loader|xwb_xilinx_fpga_loader.vhd</ClosedNode>
+         <ClosedNode>/xwr_si57x_interface - wrapper |media|wei|DATA|LW|Project|WR_Project|WR_Reference_Design|wr-cores-acme1|wr-cores|modules|wr_si57x_interface|xwr_si57x_interface.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>eb_master_slave_wrapper - behavioral (/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/ip_cores/etherbone-core/hdl/eb_master_core/eb_master_slave_wrapper.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000022b000000020000000000000000000000000200000064ffffffff0000008100000003000000020000022b0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>eb_master_slave_wrapper - behavioral (/media/wei/DATA/LW/Project/WR_Project/WR_Reference_Design/wr-cores-acme1/wr-cores/ip_cores/etherbone-core/hdl/eb_master_core/eb_master_slave_wrapper.vhd)</CurrentItem>
+   </ItemView>
+</Project>
